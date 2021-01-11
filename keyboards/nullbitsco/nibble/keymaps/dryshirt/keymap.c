@@ -51,16 +51,14 @@ void encoder_update_kb(uint8_t index, bool clockwise) {
 #ifdef OLED_DRIVER_ENABLE
 oled_rotation_t oled_init_user(oled_rotation_t rotation) { return OLED_ROTATION_90; }
 
-#define IDLE_FRAMES 5
 #define TAP_FRAMES 2 // cycles through frames on keypress, 2 required
-
+#define IDLE_FRAMES 5
 #define IDLE_FRAME_DURATION 200 // "speed" of idle animation
 #define ANIM_SIZE 512 // number of bytes in array, max is 1024 (minimize where possible)
 
 uint32_t anim_timer = 0;
 uint32_t anim_sleep = 0;
 uint8_t current_idle_frame = 0;
-uint8_t current_tap_frame = 0;
 
 char wpm_str[10];
 bool tap_anim = false;
