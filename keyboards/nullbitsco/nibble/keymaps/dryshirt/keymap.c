@@ -12,6 +12,8 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * Original: j-inc's kyria keymap
  */
 #include QMK_KEYBOARD_H
 #include <stdio.h>
@@ -53,7 +55,7 @@ oled_rotation_t oled_init_user(oled_rotation_t rotation) { return OLED_ROTATION_
 
 #define TAP_FRAMES 2 // cycles through frames on keypress, 2 required
 #define IDLE_FRAMES 5
-#define IDLE_FRAME_DURATION 200 // "speed" of idle animation
+#define IDLE_FRAME_DURATION 200 // idle animation iteration rate in ms
 #define ANIM_SIZE 512 // number of bytes in array, max is 1024 (minimize where possible)
 
 uint32_t anim_timer = 0;
